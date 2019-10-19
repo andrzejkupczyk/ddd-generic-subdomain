@@ -1,0 +1,49 @@
+{
+    "name": "andrzejkupczyk/ddd-generic-subdomain",
+    "description": "Interfaces supporting coherent implementation of DDD components",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Andrzej Kupczyk",
+            "email": "kontakt@andrzejkupczyk.pl",
+            "homepage": "https://andrzejkupczyk.pl"
+        }
+    ],
+    "require": {
+        "php": "^7.4",
+        "symfony/polyfill-php80": "^1.18"
+    },
+    "require-dev": {
+        "andrzejkupczyk/phpqa": "^1.0",
+        "beberlei/assert": "^3.2"
+    },
+    "suggest": {
+        "beberlei/assert": "Allows input validation"
+    },
+    "autoload": {
+        "psr-4": {
+            "WebGarden\\Model\\": "src/"
+        }
+    },
+    "scripts": {
+        "cs:fix": "php-cs-fixer fix",
+        "analyse": [
+            "phpmd src text cleancode,codesize,controversial,design,unusedcode,naming",
+            "phpcs --standard=PSR2 src",
+            "phpstan analyse --level max --no-progress src",
+            "php-cs-fixer fix --dry-run"
+        ]
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.0-dev"
+        }
+    },
+    "config": {
+        "preferred-install": "dist",
+        "optimize-autoloader": true,
+        "sort-packages": true
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true
+}
