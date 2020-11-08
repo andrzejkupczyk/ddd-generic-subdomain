@@ -1,0 +1,10 @@
+parameters:
+  level: 8
+  checkMissingIterableValueType: false
+  reportUnmatchedIgnoredErrors: false
+  ignoreErrors:
+    -
+      message: '#DeepCopy\\deep_copy not found#'
+      path: src/ValueObject/ImmutableValueObject.php
+  paths:
+    - src

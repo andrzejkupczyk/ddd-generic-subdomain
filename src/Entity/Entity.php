@@ -7,7 +7,7 @@ namespace WebGarden\Model\Entity;
 use WebGarden\Model\ValueObject\ValueObject;
 
 /**
- * Provides methods for a uniquely identifiable object.
+ * Represents a uniquely identifiable object.
  */
 interface Entity
 {
@@ -18,8 +18,6 @@ interface Entity
 
     /**
      * Compute the equality on the entity's identity.
-     *
-     * @param \WebGarden\Model\Entity\Entity $entity
      */
     public function sameIdentityAs(self $entity): bool;
 }

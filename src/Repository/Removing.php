@@ -4,18 +4,17 @@ declare(strict_types=1);
 
 namespace WebGarden\Model\Repository;
 
-use RuntimeException;
 use WebGarden\Model\ValueObject\ValueObject;
 
 /**
- * Provides methods for repository that should be able to remove objects.
+ * Repository that should be able to remove objects.
  */
 interface Removing
 {
     /**
-     * Remove the existing aggregate identified with the given value object.
+     * Remove the existing aggregate identified with the given identity.
      *
-     * @throws RuntimeException if the repository does not contain the aggregate
+     * @throws \RuntimeException if the repository does not contain the aggregate
      */
     public function remove(ValueObject $identity): void;
 }
