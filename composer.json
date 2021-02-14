@@ -12,8 +12,7 @@
         "issues": "https://github.com/andrzejkupczyk/ddd-generic-subdomain/issues"
     },
     "require": {
-        "php": "^7.4",
-        "symfony/polyfill-php80": "^1.20"
+        "php": "^7.4 || ^8.0"
     },
     "require-dev": {
         "myclabs/deep-copy": "^1.10"
